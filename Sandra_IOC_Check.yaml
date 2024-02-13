@@ -50,3 +50,8 @@ components:
                 source:
                     type: string
                     description: The source of the IOC
+     securitySchemes:
+        ApiKeyAuth:
+            type: apiKey
+            in: header
+            name: X-API-KEY
