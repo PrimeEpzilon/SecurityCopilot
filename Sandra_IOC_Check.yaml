@@ -6,7 +6,7 @@ Descriptor:
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: https://gist.githubusercontent.com/PrimeEpzilon/0e94cff6e841c24c6708cd591d3163c5/raw/a59c423546952586f9181a8d61024271e65db246/openapi.yaml
+      OpenApiSpecUrl: https://gist.githubusercontent.com/PrimeEpzilon/0e94cff6e841c24c6708cd591d3163c5/raw/3021076bed53c3377cef6e7d993a5fe001bd34e2/openapi.yaml
 
 info:
     title: Sandra Intelligence IP Check
