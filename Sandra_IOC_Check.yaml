@@ -1,0 +1,52 @@
+Descriptor:
+  Name: Sandra Intelligence IP Check
+  DisplayName: Sandra Intelligence IP Check
+  Description: Skills for checking IOC using the Sandra Intelligence API
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: http://sandraintelligenceip.digiware.net/check_ioc
+
+info:
+    title: Sandra Intelligence IP Check
+    description: Sandra Intelligence IP Check
+    version: "v1"
+
+servers:
+    - url: http://sandraintelligenceip.digiware.net/check_ioc
+
+paths:
+    /{ioc}:
+        get:
+            operationId: checkIOC
+            summary: Check IOC
+            parameters:
+                - in: path
+                  name: ioc
+                  schema:
+                      type: string
+                  required: true
+                  description: The IOC to check
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/checkIOCResponse"
+
+components:
+    schemas:
+        checkIOCResponse:
+            type: object
+            properties:
+                reputation:
+                    type: integer
+                    description: The reputation score
+                category:
+                    type: string
+                    description: The category of the IOC
+                source:
+                    type: string
+                    description: The source of the IOC
